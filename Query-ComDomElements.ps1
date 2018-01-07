@@ -37,7 +37,7 @@ function Query-ComDomElements([string]$Query, $Dom = $false, $Property = $false)
 	}
 	
 	if($SecondQuery -eq $false) {
-		if($Property -ne $false) {
+		if($Property -ne $false -and $Property -ne '*') {
 			return $result.$Property
 		} else {
 			return $result
